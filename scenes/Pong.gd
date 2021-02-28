@@ -2,10 +2,12 @@ extends Node2D
 class_name Pong
 
 func win() -> void:
+	$Score2.play()
 	$WinScreen.visible = true
 
 
 func loose() -> void:
+	$Score.play()
 	$LoosScreen.visible = true
 
 

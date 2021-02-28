@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 	velocity *= speed 
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		$Pop.play()
 		var motion = collision.remainder.bounce(collision.normal)
 		velocity = velocity.bounce(collision.normal)
 # warning-ignore:return_value_discarded
